@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Furniture AR</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Furniture AR</h1>
+    <nav>
+      <a href="#products">Products</a>
+      <a href="app/furniture-ar.apk" download>Download App</a>
+      <button id="install-btn" style="display: none;">Install App</button>
+    </nav>
+  </header>
+
+  <section id="slider" class="slider">
+    <div class="slides">
+      <img src="assets/images/Arm_Chair.png" alt="Arm Chair">
+      <img src="assets/images/Brown_L-Sofa.png" alt="Brown L-Sofa">
+      <img src="assets/images/Chair.png" alt="Chair">
+      <img src="assets/images/Master_Bed.png" alt="Master Bed">
+      <img src="assets/images/Metal_Shelf.png" alt="Metal Shelf">
+      <img src="assets/images/Night_Stand.png" alt="Night Stand">
+      <img src="assets/images/Shelf.png" alt="Shelf">
+      <img src="assets/images/Study_Table.png" alt="Study Table">
+      <img src="assets/images/Table.png" alt="Table">
+      <img src="assets/images/Wash_Basin.png" alt="Wash Basin">    
+    </div>
+  </section>
+
+  <section id="products" class="products">
+    <h2>Our Products</h2>
+    
+    <div class="filter-controls">
+      <input type="search" id="search-bar" placeholder="Search furniture...">
+      <div class="category-filters">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="chair">Chairs</button>
+        <button class="filter-btn" data-category="table">Tables</button>
+        <button class="filter-btn" data-category="bed">Beds</button>
+        <button class="filter-btn" data-category="shelf">Shelves</button>
+      </div>
+    </div>
+
+    <div class="product-grid">
+      
+      <div class="product-card" data-category="chair" data-name="Arm Chair">
+        <img src="assets/images/Arm_Chair.png" alt="Arm Chair">
+        <h3>Arm Chair</h3>
+        <model-viewer data-src="assets/models/Arm_Chair.glb" alt="Arm Chair Model" ar ar-placement="floor" auto-rotate camera-controls poster="assets/images/Arm_Chair.png">
+          <div class="spinner" slot="progress-bar"></div>
+        </model-viewer>
+        <button class="btn ar-button">View in 3D/AR</button>
+      </div>
+
+      <div class="product-card" data-category="sofa" data-name="Brown L-Sofa">
+        <img src="assets/images/Brown_L-Sofa.png" alt="Brown L-Sofa">
+        <h3>Brown L-Sofa</h3>
+        <model-viewer data-src="assets/models/Brown_L-Sofa.glb" alt="Brown L-Sofa Model" ar ar-placement="floor" auto-rotate camera-controls poster="assets/images/Brown_L-Sofa.png">
+           <div class="spinner" slot="progress-bar"></div>
+        </model-viewer>
+        <button class="btn ar-button">View in 3D/AR</button>
+      </div>
+
+      <div class="product-card" data-category="chair" data-name="Chair">
+        <img src="assets/images/Chair.png" alt="Chair">
+        <h3>Chair</h3>
+        <model-viewer data-src="assets/models/Chair.glb" alt="Chair Model" ar ar-placement="floor" auto-rotate camera-controls poster="assets/images/Chair.png">
+           <div class="spinner" slot="progress-bar"></div>
+        </model-viewer>
+        <button class="btn ar-button">View in 3D/AR</button>
+      </div>
+
+      <div class="product-card" data-category="bed" data-name="Master Bed">
+        <img src="assets/images/Master_Bed.png" alt="Master Bed">
+        <h3>Master Bed</h3>
+        <model-viewer data-src="assets/models/Master_Bed.glb" alt="Master Bed Model" ar ar-placement="floor" auto-rotate camera-controls poster="assets/images/Master_Bed.png">
+           <div class="spinner" slot="progress-bar"></div>
+        </model-viewer>
+        <button class="btn ar-button">View in 3D/AR</button>
+      </div>
+
+      <div class="product-card" data-category="shelf" data-name="Metal Shelf">
+        <img src="assets/images/Metal_Shelf.png" alt="Metal Shelf">
+        <h3>Metal Shelf</h3>
+        <model-viewer data-src="assets/models/Metal_Shelf.glb" alt="Metal Shelf Model" ar ar-placement="floor" auto-rotate camera-controls poster="assets/images/Metal_Shelf.png">
+           <div class="spinner" slot="progress-bar"></div>
+        </model-viewer>
+        <button class="btn ar-button">View in 3D/AR</button>
+      </div>
+
+      <div class="product-card" data-category="table" data-name="Night Stand">
+        <img src="assets/images/Night_Stand.png" alt="Night Stand">
+        <h3>Night Stand</h3>
+        <model-viewer data-src="assets/models/Night_Stand.glb" alt="Night Stand Model" ar ar-placement="floor" auto-rotate camera-controls poster="assets/images/Night_Stand.png">
+           <div class="spinner" slot="progress-bar"></div>
+        </model-viewer>
+        <button class="btn ar-button">View in 3D/AR</button>
+      </div>
+
+      <div class="product-card" data-category="shelf" data-name="Shelf">
+        <img src="assets/images/Shelf.png" alt="Shelf">
+        <h3>Shelf</h3>
+        <model-viewer data-src="assets/models/Shelf.glb" alt="Shelf Model" ar ar-placement="floor" auto-rotate camera-controls poster="assets/images/Shelf.png">
+           <div class="spinner" slot="progress-bar"></div>
+        </model-viewer>
+        <button class="btn ar-button">View in 3D/AR</button>
+      </div>
+
+      <div class="product-card" data-category="table" data-name="Study Table">
+        <img src="assets/images/Study_Table.png" alt="Study Table">
+        <h3>Study Table</h3>
+        <model-viewer data-src="assets/models/Study_Table.glb" alt="Study Table Model" ar ar-placement="floor" auto-rotate camera-controls poster="assets/images/Study_Table.png">
+           <div class="spinner" slot="progress-bar"></div>
+        </model-viewer>
+        <button class="btn ar-button">View in 3D/AR</button>
+      </div>
+
+      <div class="product-card" data-category="table" data-name="Table">
+        <img src="assets/images/Table.png" alt="Table">
+        <h3>Table</h3>
+        <model-viewer data-src="assets/models/Table.glb" alt="Table Model" ar ar-placement="floor" auto-rotate camera-controls poster="assets/images/Table.png">
+           <div class="spinner" slot="progress-bar"></div>
+        </model-viewer>
+        <button class="btn ar-button">View in 3D/AR</button>
+      </div>
+
+      <div class="product-card" data-category="basin" data-name="Wash Basin">
+        <img src="assets/images/Wash_Basin.png" alt="Wash Basin">
+        <h3>Wash Basin</h3>
+        <model-viewer data-src="assets/models/Wash_Basin.glb" alt="Wash Basin Model" ar ar-placement="floor" auto-rotate camera-controls poster="assets/images/Wash_Basin.png">
+           <div class="spinner" slot="progress-bar"></div>
+        </model-viewer>
+        <button class="btn ar-button">View in 3D/AR</button>
+      </div>
+
+      <div class="product-card" data-category="table" data-name="Wood Table">
+        <img src="assets/images/wood_table.png" alt="Wood Table">
+        <h3>Wood Table</h3>
+        <model-viewer data-src="assets/models/wood_table.glb" alt="Wood Table Model" ar ar-placement="floor" auto-rotate camera-controls poster="assets/images/wood_table.png">
+           <div class="spinner" slot="progress-bar"></div>
+        </model-viewer>
+        <button class="btn ar-button">View in 3D/AR</button>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Furniture AR. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

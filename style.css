@@ -1,0 +1,254 @@
+/*
+  Theme: Earthy & Sophisticated Luxury
+  - Deep Charcoal/Slate: #2D2D2D
+  - Warm Cream/Beige: #F0EBE3
+  - Burnt Orange/Terracotta: #E07A5F
+  - Muted Gold: #C6A969
+*/
+
+/* Import elegant fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500&display=swap');
+
+/* Define color variables for easy management */
+:root {
+  --bg-dark: #2D2D2D;
+  --bg-content: #F0EBE3;
+  --accent-primary: #E07A5F;
+  --accent-secondary: #C6A969;
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Montserrat', sans-serif;
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-dark);
+  color: var(--bg-content);
+  line-height: 1.6;
+  font-family: var(--font-sans);
+}
+
+/* Header */
+header {
+  background: rgba(45, 45, 45, 0.8); /* Slightly transparent for depth */
+  backdrop-filter: blur(10px);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(240, 235, 227, 0.1);
+}
+
+header h1 {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  color: var(--bg-content);
+}
+
+header nav a, header nav button {
+  color: var(--bg-content);
+  background: none;
+  border: none;
+  font-size: 1rem;
+  text-decoration: none;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+header nav a:hover, header nav button:hover {
+  color: var(--accent-secondary);
+}
+
+#install-btn {
+  padding: 8px 16px;
+  background-color: var(--accent-primary);
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Slider */
+.slider {
+  overflow: hidden;
+  width: 100%;
+  margin: 40px 0;
+  padding: 10px 0;
+}
+
+.slides img {
+  width: 200px;
+  height: 200px;
+  margin: 0 15px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 2px solid rgba(240, 235, 227, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.slides img:hover {
+    transform: scale(1.05);
+}
+
+/* Products Section */
+.products {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.products h2 {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: var(--bg-content);
+}
+
+/* Filter Controls */
+.filter-controls {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#search-bar {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  border: 1px solid rgba(240, 235, 227, 0.2);
+  background: rgba(0,0,0,0.2);
+  color: var(--bg-content);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+#search-bar::placeholder {
+  color: rgba(240, 235, 227, 0.5);
+}
+
+.category-filters button {
+  padding: 8px 16px;
+  border: 1px solid rgba(240, 235, 227, 0.2);
+  color: var(--bg-content);
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: all 0.3s;
+}
+
+.category-filters button:hover {
+  background: var(--accent-secondary);
+  color: var(--bg-dark);
+  border-color: var(--accent-secondary);
+}
+
+.category-filters button.active {
+  background: var(--accent-secondary);
+  color: var(--bg-dark);
+  font-weight: bold;
+  border-color: var(--accent-secondary);
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.product-card {
+  background: #3a3a3a;
+  border-radius: 10px;
+  border: 1px solid rgba(240, 235, 227, 0.1);
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-card h3 {
+  font-family: var(--font-serif);
+  margin: 15px 0 10px 0;
+  color: var(--accent-secondary);
+  font-size: 1.5rem;
+}
+
+model-viewer {
+  width: 100%;
+  height: 300px;
+  margin: 15px 0;
+  background-color: transparent; /* Remove default background */
+  border-radius: 8px;
+}
+
+/* **FIXED**: Spinner color is now visible against the dark theme */
+.spinner {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 4px solid rgba(240, 235, 227, 0.2); /* Muted spinner track */
+  border-top-color: var(--accent-secondary); /* Gold spinner color */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.product-card .btn {
+  display: inline-block;
+  background: var(--accent-primary);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.product-card .btn:hover {
+  background: #d16a50; /* Slightly darker orange on hover */
+}
+
+/* Footer */
+footer {
+  background: #1f1f1f;
+  color: rgba(240, 235, 227, 0.7);
+  text-align: center;
+  padding: 30px;
+  margin-top: 40px;
+  border-top: 1px solid rgba(240, 235, 227, 0.1);
+}
