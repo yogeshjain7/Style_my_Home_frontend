@@ -13,6 +13,7 @@
     <h1>Style My Home</h1>
     <nav>
       <a href="#products">Products</a>
+      <button id="login-nav-btn" class="nav-button">Login / Sign Up</button>
       <button id="install-btn" style="display: none;">Install App</button>
     </nav>
   </header>
@@ -40,86 +41,38 @@
       </div>
     </div>
 
-    <div class="product-grid">
-      <div class="product-card" id="product-arm-chair" data-category="chair" data-name="Arm Chair">
-        <img src="assets/images/Arm_Chair.png" alt="Arm Chair"><h3>Arm Chair</h3>
-        <div class="product-dimensions"><p>H: 95cm &nbsp;&nbsp; W: 80cm &nbsp;&nbsp; D: 75cm</p></div>
-        <model-viewer data-src="assets/models/Arm_Chair.glb" alt="Arm Chair Model" ar ar-placement="floor" auto-rotate camera-controls poster="assets/images/Arm_Chair.png"><div class="spinner" slot="progress-bar"></div></model-viewer>
-        <div class="button-row"><button class="btn ar-button">View in 3D/AR</button><button class="btn snapshot-btn">Snapshot 📸</button></div>
-      </div>
-      <div class="product-card" id="product-l-sofa" data-category="sofa" data-name="Brown L-Sofa">
-        <img src="assets/images/Brown_L-Sofa.png" alt="Brown L-Sofa"><h3>Brown L-Sofa</h3>
-        <div class="product-dimensions"><p>H: 85cm &nbsp;&nbsp; W: 240cm &nbsp;&nbsp; D: 160cm</p></div>
-        <model-viewer data-src="assets/models/Brown_L-Sofa.glb" alt="Brown L-Sofa Model" ar ar-placement="floor" auto-rotate camera-controls poster="assets/images/Brown_L-Sofa.png"><div class="spinner" slot="progress-bar"></div></model-viewer>
-        <div class="button-row"><button class="btn ar-button">View in 3D/AR</button><button class="btn snapshot-btn">Snapshot 📸</button></div>
-      </div>
-      <div class="product-card" id="product-wash-basin" data-category="basin" data-name="Wash Basin">
-        <img src="assets/images/Wash_Basin.png" alt="Wash Basin"><h3>Wash Basin</h3>
-        <div class="product-dimensions"><p>H: 88cm &nbsp;&nbsp; W: 60cm &nbsp;&nbsp; D: 45cm</p></div>
-        <model-viewer data-src="assets/models/Wash_Basin.glb" alt="Wash Basin Model" ar ar-placement="floor" auto-rotate camera-controls poster="assets/images/Wash_Basin.png"><div class="spinner" slot="progress-bar"></div></model-viewer>
-        <div class="button-row"><button class="btn ar-button">View in 3D/AR</button><button class="btn snapshot-btn">Snapshot 📸</button></div>
-      </div>
-      <div class="product-card" id="product-bed" data-category="bed" data-name="Bed">
-        <img src="assets/images/bed.png" alt="Bed"><h3>Bed</h3>
-        <div class="product-dimensions"><p>H: 110cm &nbsp;&nbsp; W: 180cm &nbsp;&nbsp; D: 210cm</p></div>
-        <model-viewer data-src="assets/models/bed.glb" alt="Bed Model" ar ar-placement="floor" auto-rotate camera-controls poster="assets/images/bed.png"><div class="spinner" slot="progress-bar"></div></model-viewer>
-        <div class="button-row"><button class="btn ar-button">View in 3D/AR</button><button class="btn snapshot-btn">Snapshot 📸</button></div>
-      </div>
-      <div class="product-card" id="product-table-lamp" data-category="lighting" data-name="Table Lamp">
-        <img src="assets/images/table_lamp.png" alt="Table Lamp"><h3>Table Lamp</h3>
-        <div class="product-dimensions"><p>H: 55cm &nbsp;&nbsp; W: 30cm &nbsp;&nbsp; D: 30cm</p></div>
-        <model-viewer data-src="assets/models/table_lamp.glb" alt="Table Lamp Model" ar ar-placement="floor" auto-rotate camera-controls poster="assets/images/table_lamp.png"><div class="spinner" slot="progress-bar"></div></model-viewer>
-        <div class="button-row"><button class="btn ar-button">View in 3D/AR</button><button class="btn snapshot-btn">Snapshot 📸</button></div>
-      </div>
-      <div class="product-card" id="product-tv-stand" data-category="storage" data-name="TV Stand">
-        <img src="assets/images/tv_stand.png" alt="TV Stand"><h3>TV Stand</h3>
-        <div class="product-dimensions"><p>H: 50cm &nbsp;&nbsp; W: 180cm &nbsp;&nbsp; D: 40cm</p></div>
-        <model-viewer data-src="assets/models/tv_stand.glb" alt="TV Stand Model" ar ar-placement="floor" auto-rotate camera-controls poster="assets/images/tv_stand.png"><div class="spinner" slot="progress-bar"></div></model-viewer>
-        <div class="button-row"><button class="btn ar-button">View in 3D/AR</button><button class="btn snapshot-btn">Snapshot 📸</button></div>
-      </div>
-      <div class="product-card" id="product-antique-desk" data-category="table" data-name="Antique Desk">
-        <img src="assets/images/antique_desk.png" alt="Antique Desk"><h3>Antique Desk</h3>
-        <div class="product-dimensions"><p>H: 78cm &nbsp;&nbsp; W: 120cm &nbsp;&nbsp; D: 60cm</p></div>
-        <model-viewer data-src="assets/models/antique_desk.glb" alt="Antique Desk Model" ar ar-placement="floor" auto-rotate camera-controls poster="assets/images/antique_desk.png"><div class="spinner" slot="progress-bar"></div></model-viewer>
-        <div class="button-row"><button class="btn ar-button">View in 3D/AR</button><button class="btn snapshot-btn">Snapshot 📸</button></div>
-      </div>
-      <div class="product-card" id="product-bookshelf" data-category="storage" data-name="Bookshelf">
-        <img src="assets/images/bookshelf.png" alt="Bookshelf"><h3>Bookshelf</h3>
-        <div class-="product-dimensions"><p>H: 180cm &nbsp;&nbsp; W: 90cm &nbsp;&nbsp; D: 30cm</p></div>
-        <model-viewer data-src="assets/models/bookshelf.glb" alt="Bookshelf Model" ar ar-placement="floor" auto-rotate camera-controls poster="assets/images/bookshelf.png"><div class="spinner" slot="progress-bar"></div></model-viewer>
-        <div class="button-row"><button class="btn ar-button">View in 3D/AR</button><button class="btn snapshot-btn">Snapshot 📸</button></div>
-      </div>
-      <div class="product-card" id="product-cupboard" data-category="storage" data-name="Cupboard">
-        <img src="assets/images/cupboard.png" alt="Cupboard"><h3>Cupboard</h3>
-        <div class-="product-dimensions"><p>H: 190cm &nbsp;&nbsp; W: 100cm &nbsp;&nbsp; D: 55cm</p></div>
-        <model-viewer data-src="assets/models/cupboard.glb" alt="Cupboard Model" ar ar-placement="floor" auto-rotate camera-controls poster="assets/images/cupboard.png"><div class="spinner" slot="progress-bar"></div></model-viewer>
-        <div class="button-row"><button class="btn ar-button">View in 3D/AR</button><button class="btn snapshot-btn">Snapshot 📸</button></div>
-      </div>
-      <div class="product-card" id="product-coffee-table" data-category="table" data-name="Coffee Table">
-        <img src="assets/images/coffee_table.png" alt="Coffee Table"><h3>Coffee Table</h3>
-        <div class="product-dimensions"><p>H: 45cm &nbsp;&nbsp; W: 110cm &nbsp;&nbsp; D: 60cm</p></div>
-        <model-viewer data-src="assets/models/coffee_table.glb" alt="Coffee Table Model" ar ar-placement="floor" auto-rotate camera-controls poster="assets/images/coffee_table.png"><div class="spinner" slot="progress-bar"></div></model-viewer>
-        <div class="button-row"><button class="btn ar-button">View in 3D/AR</button><button class="btn snapshot-btn">Snapshot 📸</button></div>
-      </div>
-      <div class="product-card" id="product-wood-table" data-category="table" data-name="Wood Table">
-        <img src="assets/images/wood_table.png" alt="Wood Table"><h3>Wood Table</h3>
-        <div class="product-dimensions"><p>H: 75cm &nbsp;&nbsp; W: 160cm &nbsp;&nbsp; D: 90cm</p></div>
-        <model-viewer data-src="assets/models/wood_table.glb" alt="Wood Table Model" ar ar-placement="floor" auto-rotate camera-controls poster="assets/images/wood_table.png"><div class="spinner" slot="progress-bar"></div></model-viewer>
-        <div class="button-row"><button class="btn ar-button">View in 3D/AR</button><button class="btn snapshot-btn">Snapshot 📸</button></div>
-      </div>
-    </div>
+    <div class="product-grid"></div>
   </section>
 
   <footer>
     <p>&copy; 2025 Style My Home. All rights reserved.</p>
   </footer>
 
+  <div id="auth-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-content">
+      <button id="auth-modal-close-btn" class="modal-close">&times;</button>
+      <form id="signup-form">
+        <h2>Create Your Account</h2>
+        <input type="text" id="signup-username" class="form-input" placeholder="Username" required>
+        <input type="password" id="signup-password" class="form-input" placeholder="Password" required>
+        <button type="submit" class="btn">Sign Up</button>
+        <p class="form-switch">Already have an account? <a href="#" id="show-login">Log In</a></p>
+      </form>
+      <form id="login-form" style="display:none;">
+        <h2>Welcome Back</h2>
+        <input type="text" id="login-username" class="form-input" placeholder="Username" required>
+        <input type="password" id="login-password" class="form-input" placeholder="Password" required>
+        <button type="submit" class="btn">Log In</button>
+        <p class="form-switch">Don't have an account? <a href="#" id="show-signup">Sign Up</a></p>
+      </form>
+    </div>
+  </div>
+
   <div id="related-modal" class="modal-overlay" style="display: none;">
     <div class="modal-content">
       <button id="modal-close-btn" class="modal-close">&times;</button>
       <h2>You might also like...</h2>
-      <div id="related-items-grid" class="product-grid">
-        </div>
+      <div id="related-items-grid" class="product-grid"></div>
     </div>
   </div>
 
