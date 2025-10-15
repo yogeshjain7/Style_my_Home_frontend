@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const backendUrl = 'http://localhost:5000'; // URL for your backend server
+  const backendUrl = 'https://style-my-home-backend.onrender.com'; // Your new backend URL // URL for your backend server
   let isLoggedIn = false;
   let pendingAction = null; // Stores the action to perform after login { action: 'view' | 'snapshot', card: element }
 
